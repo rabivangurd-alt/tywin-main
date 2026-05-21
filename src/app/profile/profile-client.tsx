@@ -71,9 +71,9 @@ export default function ProfileClient({ profile, userId, userEmail }: any) {
         <div className="text-sm font-medium mb-5">اطلاعات شخصی</div>
 
         <div className="space-y-4">
-          <Field label="نام و نام خانوادگی" value={form.full_name} onChange={v => setForm({ ...form, full_name: v })} />
+          <Field label="نام و نام خانوادگی" value={form.full_name} onChange={(v: string) => setForm({ ...form, full_name: v })} />
           <Field label="ایمیل" value={userEmail} disabled />
-          <Field label="شماره تماس" value={form.phone} onChange={v => setForm({ ...form, phone: v })} ltr />
+          <Field label="شماره تماس" value={form.phone} onChange={(v: string) => setForm({ ...form, phone: v })} ltr />
         </div>
 
         <div className="flex justify-between items-center mt-6 pt-5 border-t border-line">
