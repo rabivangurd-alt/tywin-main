@@ -11,9 +11,16 @@ export default async function AdminClientsPage() {
 
   return (
     <div className="p-7">
-      <div className="mb-7">
-        <h1 className="text-2xl font-medium mb-1.5">مشتری‌ها</h1>
-        <p className="text-xs text-text-faint">{clients?.length || 0} مشتری ثبت‌شده</p>
+      <div className="mb-7 flex justify-between items-start">
+        <div>
+          <h1 className="text-2xl font-medium mb-1.5">مشتری‌ها</h1>
+          <p className="text-xs text-text-faint">{clients?.length || 0} مشتری ثبت‌شده</p>
+        </div>
+        <Link href="/admin/clients/new"
+          className="px-5 py-2.5 rounded-xl text-[#0A0A0B] font-semibold text-xs"
+          style={{ background: "linear-gradient(135deg,#C9A961,#8B7338)" }}>
+          + افزودن مشتری
+        </Link>
       </div>
 
       <div className="rounded-2xl border border-line overflow-hidden bg-bg-2">
